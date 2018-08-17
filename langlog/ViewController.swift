@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  langlog
-//
-//  Created by anton van eechaute on 2018/08/17.
-//  Copyright © 2018 Anton Van Eechaute. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
