@@ -5,16 +5,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var coordinator: AppCoordinator!
 
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
     ) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor(hex: 0xf5f8f1)
-        window!.rootViewController = viewController
-        window!.makeKeyAndVisible()
+        coordinator = AppCoordinator()
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = coordinator.rootViewController
+        window.makeKeyAndVisible()
+
+        self.window = window
 
         return true
     }
