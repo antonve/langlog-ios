@@ -1,6 +1,9 @@
 PODS:
   - ReactorKit (1.1.0):
     - RxSwift (>= 4.0.0)
+  - rx-coordinator (0.6.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
@@ -9,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - ReactorKit
+  - rx-coordinator
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -16,11 +20,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
+  rx-coordinator: c58d3e272129410fff5f3382cee89a59f1047882
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: 55fa7d3f213843ead0b1860ffa09ea70c38c02d7
+PODFILE CHECKSUM: 7cfeb7b4023e62ffa958d1fccf10bac8c0b63be4
 
 COCOAPODS: 1.4.0

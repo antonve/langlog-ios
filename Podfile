@@ -5,6 +5,7 @@ inhibit_all_warnings!
 target 'langlog' do
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'rx-coordinator'
   pod 'Then'
   pod 'ReactorKit'
   pod 'SnapKit'
