@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = coordinator.rootViewController
         window.makeKeyAndVisible()
-
         self.window = window
+
+        coordinator.presented(from: nil)
 
         return true
     }

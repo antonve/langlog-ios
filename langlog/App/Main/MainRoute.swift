@@ -6,8 +6,7 @@ enum MainRoute: Route {
     func prepareTransition(coordinator: AnyCoordinator<MainRoute>) -> NavigationTransition {
         switch self {
         case .login:
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = UIColor(hex: 0xf5f8f1)
+            let viewController = LoginViewController()
             return .push(viewController)
         }
     }
