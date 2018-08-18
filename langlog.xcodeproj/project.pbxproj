@@ -14,6 +14,8 @@
 		3A8F7CC521271CC600900C5D /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7CC421271CC600900C5D /* UIColor+hex.swift */; };
 		3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */; };
 		3ADDC6A82127F4570065FC35 /* MainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6A72127F4570065FC35 /* MainRoute.swift */; };
+		3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */; };
+		3ADDC6B02127FE170065FC35 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AF2127FE170065FC35 /* LoginButton.swift */; };
 		E268FBEB9FBC655B80D85278 /* Pods_langlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92914CDE95A8F32CFBA9A260 /* Pods_langlog.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		3A8F7CC421271CC600900C5D /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3ADDC6A72127F4570065FC35 /* MainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoute.swift; sourceTree = "<group>"; };
+		3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstructor.swift; sourceTree = "<group>"; };
+		3ADDC6AF2127FE170065FC35 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		92914CDE95A8F32CFBA9A260 /* Pods_langlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_langlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7197FB79A256A0458435B6 /* Pods-langlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-langlog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-langlog/Pods-langlog.debug.xcconfig"; sourceTree = "<group>"; };
 		E000F4838B0ECA1E1FBE8722 /* Pods-langlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-langlog.release.xcconfig"; path = "Pods/Target Support Files/Pods-langlog/Pods-langlog.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				3ADDC6A52127F2A60065FC35 /* App */,
+				3ADDC6AD2127FDB90065FC35 /* UI */,
 				3A8F7CC321271CB300900C5D /* Extensions */,
+				3ADDC6AA2127FD370065FC35 /* Protocols */,
 				3A2449602127113800B01894 /* Assets.xcassets */,
 				3A2449622127113800B01894 /* LaunchScreen.storyboard */,
 				3A2449652127113800B01894 /* Info.plist */,
@@ -107,6 +113,30 @@
 				3A24495B2127113600B01894 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3ADDC6AA2127FD370065FC35 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3ADDC6AD2127FDB90065FC35 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3ADDC6AE2127FDC10065FC35 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3ADDC6AE2127FDC10065FC35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3ADDC6AF2127FE170065FC35 /* LoginButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E9B72AC7F44E8506B36EC352 /* Frameworks */ = {
@@ -265,7 +295,9 @@
 			files = (
 				3ADDC6A82127F4570065FC35 /* MainRoute.swift in Sources */,
 				3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */,
+				3ADDC6B02127FE170065FC35 /* LoginButton.swift in Sources */,
 				3A8F7CC521271CC600900C5D /* UIColor+hex.swift in Sources */,
+				3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */,
 				3A24495C2127113600B01894 /* LoginViewController.swift in Sources */,
 				3A24495A2127113600B01894 /* AppDelegate.swift in Sources */,
 			);
