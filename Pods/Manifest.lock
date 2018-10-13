@@ -9,6 +9,7 @@ PODS:
   - RxSwift (4.3.1)
   - SnapKit (4.0.1)
   - SwiftFormat/CLI (0.35.7)
+  - SwiftLint (0.27.0)
   - Then (2.4.0)
 
 DEPENDENCIES:
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - RxSwift
   - SnapKit (from `https://github.com/SnapKit/SnapKit`, commit `6af44ff4c901df25c06e12651bec9a3a56dce0a5`)
   - SwiftFormat/CLI
+  - SwiftLint
   - Then
 
 SPEC REPOS:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SwiftFormat
+    - SwiftLint
     - Then
 
 EXTERNAL SOURCES:
@@ -46,8 +49,9 @@ SPEC CHECKSUMS:
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftFormat: d97eadc55d4e02d04cf1f03b8a2d6ff5b6cdb2fd
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: 6a9c6edda2d420aae5608cd95fbf355190784aad
+PODFILE CHECKSUM: 18be31154c451a5cc43bb897e0fcbbec3c1094ba
 
 COCOAPODS: 1.5.3

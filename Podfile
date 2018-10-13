@@ -3,6 +3,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 pod 'SwiftFormat/CLI'
+pod 'SwiftLint'
 
 target 'langlog' do
   pod 'RxCocoa'
