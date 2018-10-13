@@ -7,14 +7,12 @@ class AppCoordinator: Coordinator {
     var navigationController: UIViewController = UINavigationController()
 
     var rootViewController: UIViewController {
-        get {
-            return self.navigationController
-        }
+        return navigationController
     }
 
     init() {}
 
-    func presented(from presentable: Presentable?) {
+    func presented(from _: Presentable?) {
         transition(to: .welcome)
     }
 }
