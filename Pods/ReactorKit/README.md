@@ -1,7 +1,7 @@
 <img alt="ReactorKit" src="https://cloud.githubusercontent.com/assets/931655/25277625/6aa05998-26da-11e7-9b85-e48bec938a6e.png" style="max-width: 100%">
 
 <p align="center">
-  <img alt="Swift" src="https://img.shields.io/badge/Swift-4.0-orange.svg">
+  <img alt="Swift" src="https://img.shields.io/badge/Swift-4.2-orange.svg">
   <a href="https://cocoapods.org/pods/ReactorKit" target="_blank">
     <img alt="CocoaPods" src="http://img.shields.io/cocoapods/v/ReactorKit.svg">
   </a>
@@ -21,7 +21,9 @@
 
 ReactorKit is a framework for a reactive and unidirectional Swift application architecture. This repository introduces the basic concept of ReactorKit and describes how to build an application using ReactorKit.
 
-You may want to see the [Examples](#examples) section first if you'd like to see the actual code. Visit the [API Reference](http://reactorkit.io/docs/latest/) for code-level documentation.
+You may want to see the [Examples](#examples) section first if you'd like to see the actual code. Visit the [API Reference](http://reactorkit.io/docs/latest/) for code-level documentation.  
+
+For an overview of ReactorKit's features and the reasoning behind its creation, you may also check the slides from this introductory presentation over at [SlideShare](https://www.slideshare.net/devxoul/hello-reactorkit).
 
 ## Table of Contents
 
@@ -30,11 +32,9 @@ You may want to see the [Examples](#examples) section first if you'd like to see
     * [View](#view)
     * [Reactor](#reactor)
 * [Advanced](#advanced)
-    * [Service](#service)
     * [Global States](#global-states)
     * [View Communication](#view-communication)
     * [Testing](#testing)
-* [Conventions](#conventions)
 * [Examples](#examples)
 * [Dependencies](#dependencies)
 * [Requirements](#requirements)
@@ -209,29 +209,6 @@ func transform(action: Observable<Action>) -> Observable<Action> {
 
 ## Advanced
 
-### Service
-
-ReactorKit has a special layer named *Service*. A service layer does the actual business logic. A reactor is a middle layer between a view and a service which manages event streams. When a reactor receives an user action from a view, the reactor calls the service logic. The service makes a network request and sends the response back to the reactor. Then the reactor create a mutation stream with the service response.
-
-Here is an example of service:
-
-```swift
-protocol UserServiceType {
-  func user(id: Int) -> Observable<User>
-  func follow(id: Int) -> Observable<Void>
-}
-
-final class UserService: Service, UserServiceType {
-  func user(id: Int) -> Observable<User> {
-    return foo()
-  }
-  
-  func follow(id: Int) -> Observable<Void> {
-    return bar()
-  }
-}
-```
-
 ### Global States
 
 Unlike Redux, ReactorKit doesn't define a global app state. It means that you can use anything to manage a global state. You can use a `Variable`, a `PublishSubject` or even a reactor. ReactorKit doesn't force to have a global state so you can use ReactorKit in a specific feature in your application.
@@ -370,29 +347,6 @@ func testIsLoading() {
 }
 ```
 
-## Conventions
-
-ReactorKit suggests some conventions to write clean and concise code.
-
-* You must create a reactor outside of the view and pass it to the view's `reactor` property.
-
-    **Good**
-
-    ```swift
-    let view = MyView()
-    view.reactor = MyViewReactor(provider: provider)
-    ```
-
-    **Bad**
-
-    ```swift
-    class MyView: UIView, View {
-      init() {
-        self.reactor = MyViewReactor()
-      }
-    }
-    ```
-
 ## Examples
 
 * [Counter](https://github.com/ReactorKit/ReactorKit/tree/master/Examples/Counter): The most simple and basic example of ReactorKit
@@ -416,17 +370,13 @@ ReactorKit suggests some conventions to write clean and concise code.
 
 ## Installation
 
-* **Using [CocoaPods](https://cocoapods.org)**:
+ReactorKit officially supports CocoaPods only.
 
-    ```ruby
-    pod 'ReactorKit'
-    ```
+**Podfile**
 
-* **Using [Carthage](https://github.com/Carthage/Carthage)**:
-
-    ```
-    github "ReactorKit/ReactorKit"
-    ```
+```ruby
+pod 'ReactorKit'
+```
 
 ## Contribution
 
@@ -446,14 +396,21 @@ Any discussions and pull requests are welcomed 💖
 
 ## Community
 
-Join [#reactorkit](https://rxswift.slack.com/messages/C561PETRN/) on [RxSwift Slack](http://rxswift-slack.herokuapp.com/)!
+* **English**: Join [#reactorkit](https://rxswift.slack.com/messages/C561PETRN/) on [RxSwift Slack](http://rxswift-slack.herokuapp.com/)
+* **Korean**: Join [#reactorkit](https://swiftkorea.slack.com/messages/C568YM2RF/) on [Swift Korea Slack](http://slack.swiftkorea.org/)
 
 ## Who's using ReactorKit
 
 <p align="center">
-  <a href="https://www.stylesha.re" target="_blank"><img height="48" vspace="20" hspace="20" alt="StyleShare" src="https://user-images.githubusercontent.com/931655/30255218-e16fedfe-966f-11e7-973d-7d8d1726d7f6.png"></a>
-  <a href="http://www.kakaocorp.com" target="_blank"><img height="36" vspace="32" hspace="20" alt="Kakao" src="https://user-images.githubusercontent.com/931655/30324656-cbea148a-97fc-11e7-9101-ba38d50f08f4.png"></a>
-  <a href="http://getdoctalk.com" target="_blank"><img height="48" vspace="24" hspace="20" alt="DocTalk" src="https://user-images.githubusercontent.com/931655/30633896-503d142c-9e28-11e7-8e67-69c2822efe77.png"></a>
+  <br>
+  <a href="https://www.stylesha.re"><img align="center" height="48" alt="StyleShare" hspace="15" src="https://user-images.githubusercontent.com/931655/30255218-e16fedfe-966f-11e7-973d-7d8d1726d7f6.png"></a>
+  <a href="http://www.kakaocorp.com"><img align="center" height="36" alt="Kakao" hspace="15" src="https://user-images.githubusercontent.com/931655/30324656-cbea148a-97fc-11e7-9101-ba38d50f08f4.png"></a>
+  <a href="https://www.wantedly.com"><img align="center" height="33" alt="Wantedly" hspace="15" src="https://user-images.githubusercontent.com/2222333/36962929-c448de2a-2094-11e8-9c45-d300890a1a97.png"></a>
+  <br><br>
+  <a href="http://getdoctalk.com"><img align="center" height="48" alt="DocTalk" hspace="15" src="https://user-images.githubusercontent.com/931655/30633896-503d142c-9e28-11e7-8e67-69c2822efe77.png"></a>
+  <a href="https://www.constantcontact.com"><img align="center" height="44" alt="Constant Contact" hspace="15" src="https://user-images.githubusercontent.com/931655/43634090-2cb30c7e-9746-11e8-8e18-e4fcf87a08cc.png"></a>
+  <a href="https://www.kt.com"><img align="center" height="42" alt="Wantedly" hspace="15" src="https://user-images.githubusercontent.com/931655/43634093-2ec9e94c-9746-11e8-9213-75c352e0c147.png"></a>
+  <br><br>
 </p>
 
 > Are you using ReactorKit? Please [let me know](mailto:devxoul+reactorkit@gmail.com)!
