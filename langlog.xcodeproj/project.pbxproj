@@ -168,6 +168,8 @@
 			buildPhases = (
 				36DE51E1436C75F6527981EF /* [CP] Check Pods Manifest.lock */,
 				3A2680512171DA9A00A9012B /* SwiftFormat */,
+				3A2680532171DD5600A9012B /* SwiftLint autocorrect */,
+				3A2680542171DD7400A9012B /* SwiftLint */,
 				3A2449522127113600B01894 /* Sources */,
 				3A2449532127113600B01894 /* Frameworks */,
 				3A2449542127113600B01894 /* Resources */,
@@ -292,6 +294,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/langlog\"\n";
+		};
+		3A2680532171DD5600A9012B /* SwiftLint autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint autocorrect";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n";
+		};
+		3A2680542171DD7400A9012B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
