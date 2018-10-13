@@ -5,10 +5,22 @@ import Then
 class LoginViewController: UIViewController, ViewConstructor {
     struct Const {
         static let padding: CGFloat = 50
+        static let spacing: CGFloat = 12
     }
 
-    private let loginButton = LoginButton().then {
+    private let buttonView = UIStackView().then {
+        $0.axis = .vertical
+        $0.alignment = .fill
+        $0.distribution = .equalSpacing
+        $0.spacing = Const.spacing
+    }
+
+    private let loginButton = OnboardingButton().then {
         $0.setTitle("Log in", for: .normal)
+    }
+
+    private let registerButton = OnboardingButton().then {
+        $0.setTitle("Register", for: .normal)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -25,12 +37,16 @@ class LoginViewController: UIViewController, ViewConstructor {
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(hex: 0xf5f8f1)
 
-        view.addSubview(loginButton)
+        view.addSubview(buttonView.then {
+            $0.addArrangedSubview(loginButton)
+            $0.addArrangedSubview(registerButton)
+        })
     }
 
     func setupConstraints() {
-        loginButton.snp.makeConstraints {
-            $0.left.right.bottom.equalToSuperview().inset(Const.padding)
+        buttonView.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(Const.padding)
+            $0.bottom.equalTo(additionalSafeAreaInsets.bottom).inset(Const.padding)
         }
     }
 }
