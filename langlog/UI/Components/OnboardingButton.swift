@@ -1,6 +1,6 @@
 import UIKit
 
-class LoginButton: UIButton, ViewConstructor {
+class OnboardingButton: UIButton, ViewConstructor {
     struct Const {
         static let height: CGFloat = 48
     }
