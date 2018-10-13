@@ -1,12 +1,20 @@
 import UIKit
+import ReactorKit
 import SnapKit
 import Then
 
-class WelcomeViewController: UIViewController, ViewConstructor {
-    struct Const {
+class WelcomeViewController: UIViewController, ViewConstructor, View {
+    fileprivate struct Const {
         static let padding: CGFloat = 50
         static let spacing: CGFloat = 12
     }
+
+    struct Callback {
+        let didTapLogin: (() -> Void)
+        let didTapRegister: (() -> Void)
+    }
+
+    private let callback: Callback
 
     private let buttonView = UIStackView().then {
         $0.axis = .vertical
@@ -27,8 +35,18 @@ class WelcomeViewController: UIViewController, ViewConstructor {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
+    init(callback: Callback) {
+        self.callback = callback
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupViews()
         setupConstraints()
     }

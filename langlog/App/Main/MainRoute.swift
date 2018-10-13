@@ -6,7 +6,11 @@ enum MainRoute: Route {
     func prepareTransition(coordinator: AnyCoordinator<MainRoute>) -> NavigationTransition {
         switch self {
         case .welcome:
-            let viewController = WelcomeViewController()
+            let callback = WelcomeViewController.Callback(
+                didTapLogin: { print("login") },
+                didTapRegister: { print("register") }
+            )
+            let viewController = WelcomeViewController(callback: callback)
             return .push(viewController)
         }
     }
