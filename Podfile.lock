@@ -18,6 +18,15 @@ DEPENDENCIES:
   - SnapKit
   - Then
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ReactorKit
+    - rx-coordinator
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - Then
+
 SPEC CHECKSUMS:
   ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
   rx-coordinator: c58d3e272129410fff5f3382cee89a59f1047882
@@ -28,4 +37,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7cfeb7b4023e62ffa958d1fccf10bac8c0b63be4
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
