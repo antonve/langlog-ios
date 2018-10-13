@@ -1,5 +1,6 @@
 import UIKit
 import ReactorKit
+import RxSwift
 import SnapKit
 import Then
 
@@ -15,6 +16,8 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
     }
 
     private let callback: Callback
+
+    var disposeBag = DisposeBag()
 
     private let buttonView = UIStackView().then {
         $0.axis = .vertical
@@ -66,5 +69,19 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
             $0.left.right.equalToSuperview().inset(Const.padding)
             $0.bottom.equalTo(additionalSafeAreaInsets.bottom).inset(Const.padding)
         }
+    }
+
+    func bind(reactor: WelcomeReactor) {
+        loginButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.callback.didTapLogin()
+            })
+            .disposed(by: disposeBag)
+
+        registerButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.callback.didTapRegister()
+            })
+            .disposed(by: disposeBag)
     }
 }

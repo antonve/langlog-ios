@@ -11,6 +11,7 @@ enum MainRoute: Route {
                 didTapRegister: { print("register") }
             )
             let viewController = WelcomeViewController(callback: callback)
+            viewController.reactor = WelcomeReactor()
             return .push(viewController)
         }
     }
