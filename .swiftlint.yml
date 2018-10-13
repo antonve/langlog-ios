@@ -1,0 +1,46 @@
+# https://github.com/realm/SwiftLint/blob/master/Rules.md
+opt_in_rules:
+  - array_init                           # Prefer using `Array(seq)` over `seq.map { $0 }` to convert a sequence into an Array.
+  - closure_end_indentation              # Closure end should have the same indentation as the line that started it.
+  - closure_spacing                      # Closure expressions should have a single space inside each brace.
+  - contains_over_first_not_nil          # Prefer `contains` over `first(where:) != nil`
+  - discouraged_object_literal           # Prefer initializers over object literals.
+  - discouraged_optional_boolean         # Prefer non-optional booleans over optional booleans.
+  - empty_count                          # Prefer checking `isEmpty` over comparing `count` to zero.
+  - empty_string                         # Prefer checking `isEmpty` over comparing `string` to an empty string literal.
+  - explicit_init                        # Explicitly calling .init() should be avoided.
+  - fatal_error_message                  # A fatalError call should have a message.
+  - file_name                            # ?? File name should match a type or extension declared in the file (if any).
+  - first_where                          # Prefer using .first(where:) over .filter { }.first in collections.
+  - function_default_parameter_at_end    # Prefer to locate parameters with defaults toward the end of the parameter list.
+  - implicit_return                      # Prefer implicit returns in closures.
+  - implicitly_unwrapped_optional        # Implicitly unwrapped optionals should be avoided when possible.
+  - literal_expression_end_indentation   # Array and dictionary literal end should have the same indentation as the line that started it.
+  - multiline_arguments                  # Arguments should be either on the same line, or one per line.
+  - multiline_parameters                 # Functions and methods parameters should be either on the same line, or one per line.
+  - operator_usage_whitespace            # Operators should be surrounded by a single whitespace when they are being used.
+  - pattern_matching_keywords            # Combine multiple pattern matching bindings by moving keywords out of tuples.
+  - private_action                       # IBActions should be private.
+  - redundant_nil_coalescing             # nil coalescing operator is only evaluated if the lhs is nil, coalescing operator with nil as rhs is redundant
+  - sorted_first_last                    # Prefer using `min()` or `max()` over `sorted().first` or `sorted().last`
+  - sorted_imports                       # Imports should be sorted.
+  - vertical_parameter_alignment_on_call # Function parameters should be aligned vertically if they're in multiple lines in a method call.
+disabled_rules:
+  - todo # TODOs and FIXMEs should be resolved.
+excluded:
+  - Pods
+  - .git
+identifier_name:
+  max_length: 40
+  excluded:
+    - id
+    - me
+    - to
+    - by
+    - on
+    - x
+    - y
+    - z
+trailing_comma:
+  mandatory_comma: true
+line_length: 120
