@@ -15,6 +15,6 @@ class AppCoordinator: Coordinator {
     init() {}
 
     func presented(from presentable: Presentable?) {
-        transition(to: .login)
+        transition(to: .welcome)
     }
 }

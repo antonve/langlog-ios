@@ -1,12 +1,12 @@
 import RxCoordinator
 
 enum MainRoute: Route {
-    case login
+    case welcome
 
     func prepareTransition(coordinator: AnyCoordinator<MainRoute>) -> NavigationTransition {
         switch self {
-        case .login:
-            let viewController = LoginViewController()
+        case .welcome:
+            let viewController = WelcomeViewController()
             return .push(viewController)
         }
     }

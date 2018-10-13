@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 import Then
 
-class LoginViewController: UIViewController, ViewConstructor {
+class WelcomeViewController: UIViewController, ViewConstructor {
     struct Const {
         static let padding: CGFloat = 50
         static let spacing: CGFloat = 12
