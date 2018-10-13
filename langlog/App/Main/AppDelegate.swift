@@ -2,14 +2,13 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     var coordinator: AppCoordinator!
 
     func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+        _: UIApplication,
+        didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         coordinator = AppCoordinator()
 
@@ -23,4 +22,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

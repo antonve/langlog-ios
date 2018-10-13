@@ -1,8 +1,8 @@
-import UIKit
 import ReactorKit
 import RxSwift
 import SnapKit
 import Then
+import UIKit
 
 class WelcomeViewController: UIViewController, ViewConstructor, View {
     fileprivate struct Const {
@@ -34,7 +34,7 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
         $0.setTitle("Register", for: .normal)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
@@ -43,7 +43,7 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
         super.init(nibName: nil, bundle: nil)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -56,7 +56,7 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
 
     func setupViews() {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        view.backgroundColor = UIColor(hex: 0xf5f8f1)
+        view.backgroundColor = UIColor(hex: 0xF5F8F1)
 
         view.addSubview(buttonView.then {
             $0.addArrangedSubview(loginButton)
@@ -71,7 +71,7 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
         }
     }
 
-    func bind(reactor: WelcomeReactor) {
+    func bind(reactor _: WelcomeReactor) {
         loginButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.callback.didTapLogin()

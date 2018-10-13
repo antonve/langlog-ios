@@ -2,6 +2,8 @@ platform :ios, '11.0'
 use_frameworks!
 inhibit_all_warnings!
 
+pod 'SwiftFormat/CLI'
+
 target 'langlog' do
   pod 'RxCocoa'
   pod 'RxSwift'
