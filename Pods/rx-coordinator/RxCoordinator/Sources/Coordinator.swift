@@ -73,7 +73,7 @@ extension Coordinator {
         let presentationObservable = self.presentationObservable(for: viewController)
         let dismissalObservable = self.dismissalObservable(for: viewController)
 
-        container.viewController.addChild(viewController)
+        container.viewController.addChildViewController(viewController)
 
         viewController.view.translatesAutoresizingMaskIntoConstraints = false
         container.view.addSubview(viewController.view)
@@ -83,7 +83,7 @@ extension Coordinator {
         container.view.topAnchor.constraint(equalTo: viewController.view.topAnchor).isActive = true
         container.view.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor).isActive = true
 
-        viewController.didMove(toParent: container.viewController)
+        viewController.didMove(toParentViewController: container.viewController)
 
         return TransitionObservables(presentation: presentationObservable, dismissal: dismissalObservable)
     }
