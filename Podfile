@@ -8,7 +8,9 @@ pod 'SwiftLint'
 target 'langlog' do
   pod 'RxCocoa'
   pod 'RxSwift'
-  pod 'rx-coordinator'
+  pod 'rx-coordinator',
+    git: 'https://github.com/antonve/RxCoordinator',
+    branch: 'master'
   pod 'Then'
   pod 'ReactorKit'
   pod 'SnapKit',
