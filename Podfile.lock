@@ -1,9 +1,6 @@
 PODS:
   - ReactorKit (1.2.0):
     - RxSwift (>= 4.0.0)
-  - rx-coordinator (0.6.0):
-    - RxCocoa (~> 4.3)
-    - RxSwift (~> 4.3)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
@@ -17,7 +14,6 @@ PODS:
 
 DEPENDENCIES:
   - ReactorKit
-  - rx-coordinator (from `https://github.com/antonve/RxCoordinator`, branch `master`)
   - RxCocoa
   - RxSwift
   - SnapKit (from `https://github.com/SnapKit/SnapKit`, commit `6af44ff4c901df25c06e12651bec9a3a56dce0a5`)
@@ -39,24 +35,17 @@ SPEC REPOS:
     - Then
 
 EXTERNAL SOURCES:
-  rx-coordinator:
-    :branch: master
-    :git: https://github.com/antonve/RxCoordinator
   SnapKit:
     :commit: 6af44ff4c901df25c06e12651bec9a3a56dce0a5
     :git: https://github.com/SnapKit/SnapKit
 
 CHECKOUT OPTIONS:
-  rx-coordinator:
-    :commit: 1a897724cc89f72824b957218b398ea2fa5da4b1
-    :git: https://github.com/antonve/RxCoordinator
   SnapKit:
     :commit: 6af44ff4c901df25c06e12651bec9a3a56dce0a5
     :git: https://github.com/SnapKit/SnapKit
 
 SPEC CHECKSUMS:
   ReactorKit: 18ca466f1e77fef1827addeb921fba8ae14edd63
-  rx-coordinator: 974b02a2fd53d51f0a3ffe5fbf8453cd09711f58
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
@@ -66,6 +55,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: f92d1b12743a827acab5f719ead93ebad7007b68
+PODFILE CHECKSUM: 1acc6b13c622766106f5d3e2098616dc950e130a
 
 COCOAPODS: 1.5.3
