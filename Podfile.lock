@@ -10,6 +10,9 @@ PODS:
   - SnapKit (4.0.1)
   - SwiftFormat/CLI (0.35.7)
   - SwiftLint (0.27.0)
+  - Swinject (2.5.0)
+  - SwinjectAutoregistration (2.5.0):
+    - Swinject (~> 2.5)
   - Then (2.4.0)
 
 DEPENDENCIES:
@@ -20,6 +23,8 @@ DEPENDENCIES:
   - SnapKit (from `https://github.com/SnapKit/SnapKit`, commit `6af44ff4c901df25c06e12651bec9a3a56dce0a5`)
   - SwiftFormat/CLI
   - SwiftLint
+  - Swinject
+  - SwinjectAutoregistration
   - Then
 
 SPEC REPOS:
@@ -29,6 +34,8 @@ SPEC REPOS:
     - RxSwift
     - SwiftFormat
     - SwiftLint
+    - Swinject
+    - SwinjectAutoregistration
     - Then
 
 EXTERNAL SOURCES:
@@ -55,8 +62,10 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftFormat: d97eadc55d4e02d04cf1f03b8a2d6ff5b6cdb2fd
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: 23179729d2d4db1379fe51570472bfeb5567d74c
+PODFILE CHECKSUM: f92d1b12743a827acab5f719ead93ebad7007b68
 
 COCOAPODS: 1.5.3
