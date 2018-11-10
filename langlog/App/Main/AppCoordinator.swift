@@ -1,18 +1,21 @@
-import RxCoordinator
+import Swinject
 
-class AppCoordinator: Coordinator {
-    typealias CoordinatorRoute = MainRoute
+class AppCoordinator {
+    var resolver: Resolver
+    var coordinator: Coordinator
+    var window: UIWindow?
 
-    var context: UIViewController!
-    var navigationController: UIViewController = UINavigationController()
-
-    var rootViewController: UIViewController {
-        return navigationController
+    init(resolver: Resolver) {
+        self.resolver = resolver
+        coordinator = WelcomeCoordinator(resolver: resolver)
     }
 
-    init() {}
+    func start() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = coordinator.presenter
+        window.makeKeyAndVisible()
+        self.window = window
 
-    func presented(from _: Presentable?) {
-        transition(to: .welcome)
+        coordinator.start()
     }
 }
