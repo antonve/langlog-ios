@@ -26,9 +26,9 @@ class SignupViewController: UIViewController, ViewConstructor, View {
         $0.spacing = Const.spacing
     }
 
-    private let nameInput = LabeledTextInput(label: "Name", placeholder: "Name")
-    private let emailInput = LabeledTextInput(label: "Email", placeholder: "Email")
-    private let passwordInput = LabeledTextInput(label: "Password", placeholder: "Password")
+    private let nameInput = TextInput(placeholder: "Name")
+    private let emailInput = TextInput(placeholder: "Email")
+    private let passwordInput = TextInput(placeholder: "Password")
 
     init(callback: Callback) {
         self.callback = callback
