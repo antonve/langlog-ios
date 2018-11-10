@@ -6,3 +6,11 @@ protocol Coordinator {
 
     func start()
 }
+
+protocol NavigationCoordinator: Coordinator {
+    var navigationController: UINavigationController { get }
+}
+
+extension NavigationCoordinator {
+    var presenter: UIViewController { return navigationController }
+}
