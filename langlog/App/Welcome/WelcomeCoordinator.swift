@@ -11,7 +11,7 @@ class WelcomeCoordinator: NavigationCoordinator {
     func start() {
         let callback = WelcomeViewController.Callback(
             didTapLogin: { print("login") },
-            didTapRegister: { [weak self] in self?.showSignup() }
+            didTapSignup: { [weak self] in self?.showSignup() }
         )
         let viewController = WelcomeViewController(callback: callback)
         viewController.reactor = WelcomeReactor()

@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
 
     struct Callback {
         let didTapLogin: (() -> Void)
-        let didTapRegister: (() -> Void)
+        let didTapSignup: (() -> Void)
     }
 
     private let callback: Callback
@@ -31,8 +31,8 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
         $0.setTitle("Log in", for: .normal)
     }
 
-    private let registerButton = OnboardingButton().then {
-        $0.setTitle("Register", for: .normal)
+    private let signupButton = OnboardingButton().then {
+        $0.setTitle("Sign up", for: .normal)
     }
 
     override func viewWillDisappear(_: Bool) {
@@ -61,7 +61,7 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
 
         view.addSubview(buttonView.then {
             $0.addArrangedSubview(loginButton)
-            $0.addArrangedSubview(registerButton)
+            $0.addArrangedSubview(signupButton)
         })
     }
 
@@ -79,9 +79,9 @@ class WelcomeViewController: UIViewController, ViewConstructor, View {
             })
             .disposed(by: disposeBag)
 
-        registerButton.rx.tap
+        signupButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.callback.didTapRegister()
+                self?.callback.didTapSignup()
             })
             .disposed(by: disposeBag)
     }
