@@ -30,6 +30,10 @@ class SignupViewController: UIViewController, ViewConstructor, View {
     private let emailInput = TextInput(placeholder: "Email")
     private let passwordInput = TextInput(placeholder: "Password")
 
+    private let submitButton = OnboardingButton().then {
+        $0.setTitle("Sign up", for: .normal)
+    }
+
     init(callback: Callback) {
         self.callback = callback
         super.init(nibName: nil, bundle: nil)
@@ -47,6 +51,7 @@ class SignupViewController: UIViewController, ViewConstructor, View {
     }
 
     func setupViews() {
+        title = "Sign up"
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(hex: 0xF5F8F1)
 
@@ -54,6 +59,7 @@ class SignupViewController: UIViewController, ViewConstructor, View {
             $0.addArrangedSubview(nameInput)
             $0.addArrangedSubview(emailInput)
             $0.addArrangedSubview(passwordInput)
+            $0.addArrangedSubview(submitButton)
         })
     }
 
