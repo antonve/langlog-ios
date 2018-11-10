@@ -18,6 +18,7 @@
 		3AB12E0E2196A56200858AEA /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12E0D2196A56200858AEA /* WelcomeCoordinator.swift */; };
 		3AB12E112196AB9A00858AEA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12E102196AB9A00858AEA /* SignupViewController.swift */; };
 		3AB12E132196AD7A00858AEA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12E122196AD7A00858AEA /* TextInput.swift */; };
+		3AD4D79B2196B6BE00D1CE3F /* SignupReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4D79A2196B6BE00D1CE3F /* SignupReactor.swift */; };
 		3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */; };
 		3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */; };
 		3ADDC6B02127FE170065FC35 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AF2127FE170065FC35 /* OnboardingButton.swift */; };
@@ -38,6 +39,7 @@
 		3AB12E0D2196A56200858AEA /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		3AB12E102196AB9A00858AEA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		3AB12E122196AD7A00858AEA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		3AD4D79A2196B6BE00D1CE3F /* SignupReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupReactor.swift; sourceTree = "<group>"; };
 		3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstructor.swift; sourceTree = "<group>"; };
 		3ADDC6AF2127FE170065FC35 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB12E102196AB9A00858AEA /* SignupViewController.swift */,
+				3AD4D79A2196B6BE00D1CE3F /* SignupReactor.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				3A6CB615217B089E00B7A5B8 /* Coordinator.swift in Sources */,
 				3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */,
 				3AB12E132196AD7A00858AEA /* TextInput.swift in Sources */,
+				3AD4D79B2196B6BE00D1CE3F /* SignupReactor.swift in Sources */,
 				3AB12E112196AB9A00858AEA /* SignupViewController.swift in Sources */,
 				3ADDC6B02127FE170065FC35 /* OnboardingButton.swift in Sources */,
 				3A2680502171D7E400A9012B /* WelcomeReactor.swift in Sources */,

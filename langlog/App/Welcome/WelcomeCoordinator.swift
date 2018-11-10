@@ -24,6 +24,7 @@ class WelcomeCoordinator: NavigationCoordinator {
             didTapSubmit: { print("submit") }
         )
         let viewController = SignupViewController(callback: callback)
+        viewController.reactor = SignupReactor()
 
         navigationController.pushViewController(viewController, animated: true)
     }

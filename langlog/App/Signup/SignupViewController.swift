@@ -70,5 +70,5 @@ class SignupViewController: UIViewController, ViewConstructor, View {
         }
     }
 
-    func bind(reactor _: WelcomeReactor) {}
+    func bind(reactor _: SignupReactor) {}
 }
