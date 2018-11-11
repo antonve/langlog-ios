@@ -20,6 +20,7 @@
 		3AB12E132196AD7A00858AEA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB12E122196AD7A00858AEA /* TextInput.swift */; };
 		3AD4D79B2196B6BE00D1CE3F /* SignupReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4D79A2196B6BE00D1CE3F /* SignupReactor.swift */; };
 		3AD4D79F2197EDC300D1CE3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4D79E2197EDC300D1CE3F /* LoginViewController.swift */; };
+		3AD4D7A12197EE2500D1CE3F /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4D7A02197EE2500D1CE3F /* LoginReactor.swift */; };
 		3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */; };
 		3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */; };
 		3ADDC6B02127FE170065FC35 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AF2127FE170065FC35 /* OnboardingButton.swift */; };
@@ -42,6 +43,7 @@
 		3AB12E122196AD7A00858AEA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		3AD4D79A2196B6BE00D1CE3F /* SignupReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupReactor.swift; sourceTree = "<group>"; };
 		3AD4D79E2197EDC300D1CE3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3AD4D7A02197EE2500D1CE3F /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstructor.swift; sourceTree = "<group>"; };
 		3ADDC6AF2127FE170065FC35 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3AD4D79E2197EDC300D1CE3F /* LoginViewController.swift */,
+				3AD4D7A02197EE2500D1CE3F /* LoginReactor.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				3AD4D79F2197EDC300D1CE3F /* LoginViewController.swift in Sources */,
 				3A6CB613217B00C200B7A5B8 /* AppAssembly.swift in Sources */,
+				3AD4D7A12197EE2500D1CE3F /* LoginReactor.swift in Sources */,
 				3A6CB615217B089E00B7A5B8 /* Coordinator.swift in Sources */,
 				3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */,
 				3AB12E132196AD7A00858AEA /* TextInput.swift in Sources */,

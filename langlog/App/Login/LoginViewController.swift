@@ -68,5 +68,5 @@ class LoginViewController: UIViewController, ViewConstructor, View {
         }
     }
 
-    func bind(reactor _: SignupReactor) {}
+    func bind(reactor _: LoginReactor) {}
 }
