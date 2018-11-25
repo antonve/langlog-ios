@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A176FB521AA601600292DEA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A176FB421AA601600292DEA /* String.swift */; };
 		3A24495A2127113600B01894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2449592127113600B01894 /* AppDelegate.swift */; };
 		3A24495C2127113600B01894 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24495B2127113600B01894 /* WelcomeViewController.swift */; };
 		3A2449612127113800B01894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2449602127113800B01894 /* Assets.xcassets */; };
@@ -24,10 +25,12 @@
 		3ADDC6A42127F20C0065FC35 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */; };
 		3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */; };
 		3ADDC6B02127FE170065FC35 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDC6AF2127FE170065FC35 /* OnboardingButton.swift */; };
+		3AE6C4D821A4506B009453CC /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C4D721A4506B009453CC /* SessionService.swift */; };
 		E268FBEB9FBC655B80D85278 /* Pods_langlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92914CDE95A8F32CFBA9A260 /* Pods_langlog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A176FB421AA601600292DEA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3A2449562127113600B01894 /* langlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = langlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2449592127113600B01894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A24495B2127113600B01894 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		3ADDC6A32127F20C0065FC35 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3ADDC6AB2127FD4C0065FC35 /* ViewConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstructor.swift; sourceTree = "<group>"; };
 		3ADDC6AF2127FE170065FC35 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		3AE6C4D721A4506B009453CC /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		92914CDE95A8F32CFBA9A260 /* Pods_langlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_langlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7197FB79A256A0458435B6 /* Pods-langlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-langlog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-langlog/Pods-langlog.debug.xcconfig"; sourceTree = "<group>"; };
 		E000F4838B0ECA1E1FBE8722 /* Pods-langlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-langlog.release.xcconfig"; path = "Pods/Target Support Files/Pods-langlog/Pods-langlog.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,11 +68,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A176FB321AA600100292DEA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3A176FB421AA601600292DEA /* String.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		3A24494D2127113600B01894 = {
 			isa = PBXGroup;
 			children = (
 				3A2449582127113600B01894 /* langlog */,
 				3A6CB611217B009300B7A5B8 /* BusinessLogic */,
+				3A176FB321AA600100292DEA /* Library */,
 				3A2449572127113600B01894 /* Products */,
 				F4C59BEA2302ACDF043B53E5 /* Pods */,
 				E9B72AC7F44E8506B36EC352 /* Frameworks */,
@@ -100,6 +113,7 @@
 		3A6CB611217B009300B7A5B8 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				3AE6C4D721A4506B009453CC /* SessionService.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -283,7 +297,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-langlog/Pods-langlog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -293,7 +310,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -394,10 +414,12 @@
 				3AD4D79B2196B6BE00D1CE3F /* SignupReactor.swift in Sources */,
 				3AB12E112196AB9A00858AEA /* SignupViewController.swift in Sources */,
 				3ADDC6B02127FE170065FC35 /* OnboardingButton.swift in Sources */,
+				3AE6C4D821A4506B009453CC /* SessionService.swift in Sources */,
 				3A2680502171D7E400A9012B /* WelcomeReactor.swift in Sources */,
 				3A8F7CC521271CC600900C5D /* UIColor+hex.swift in Sources */,
 				3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */,
 				3AB12E0E2196A56200858AEA /* WelcomeCoordinator.swift in Sources */,
+				3A176FB521AA601600292DEA /* String.swift in Sources */,
 				3A24495C2127113600B01894 /* WelcomeViewController.swift in Sources */,
 				3A24495A2127113600B01894 /* AppDelegate.swift in Sources */,
 			);
