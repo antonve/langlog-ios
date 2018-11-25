@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A176FB521AA601600292DEA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A176FB421AA601600292DEA /* String.swift */; };
 		3A24495A2127113600B01894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2449592127113600B01894 /* AppDelegate.swift */; };
 		3A24495C2127113600B01894 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24495B2127113600B01894 /* WelcomeViewController.swift */; };
 		3A2449612127113800B01894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2449602127113800B01894 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A176FB421AA601600292DEA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3A2449562127113600B01894 /* langlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = langlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2449592127113600B01894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A24495B2127113600B01894 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +68,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A176FB321AA600100292DEA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3A176FB421AA601600292DEA /* String.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		3A24494D2127113600B01894 = {
 			isa = PBXGroup;
 			children = (
 				3A2449582127113600B01894 /* langlog */,
 				3A6CB611217B009300B7A5B8 /* BusinessLogic */,
+				3A176FB321AA600100292DEA /* Library */,
 				3A2449572127113600B01894 /* Products */,
 				F4C59BEA2302ACDF043B53E5 /* Pods */,
 				E9B72AC7F44E8506B36EC352 /* Frameworks */,
@@ -408,6 +419,7 @@
 				3A8F7CC521271CC600900C5D /* UIColor+hex.swift in Sources */,
 				3ADDC6AC2127FD4C0065FC35 /* ViewConstructor.swift in Sources */,
 				3AB12E0E2196A56200858AEA /* WelcomeCoordinator.swift in Sources */,
+				3A176FB521AA601600292DEA /* String.swift in Sources */,
 				3A24495C2127113600B01894 /* WelcomeViewController.swift in Sources */,
 				3A24495A2127113600B01894 /* AppDelegate.swift in Sources */,
 			);
